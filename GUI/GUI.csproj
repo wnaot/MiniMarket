@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BanHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanHangGUI.Designer.cs">
+      <DependentUpon>BanHangGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +74,23 @@
     <Compile Include="MyCustom\BiggerCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MyCustom\CustomNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MyCustom\GradientPanel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyCustom\MyProductInCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyCustom\MyProductInCart.Designer.cs">
+      <DependentUpon>MyProductInCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCustom\MyProductItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyCustom\MyProductItem.Designer.cs">
+      <DependentUpon>MyProductItem.cs</DependentUpon>
     </Compile>
     <Compile Include="MyCustom\RJButton.cs">
       <SubType>Component</SubType>
@@ -90,11 +112,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPhamGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPhamGUI.Designer.cs">
+      <DependentUpon>SanPhamGUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BanHangGUI.resx">
+      <DependentUpon>BanHangGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienGUI.resx">
       <DependentUpon>GiaoDienGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHangGUI.resx">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCustom\MyProductInCart.resx">
+      <DependentUpon>MyProductInCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCustom\MyProductItem.resx">
+      <DependentUpon>MyProductItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyCustom\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
@@ -109,6 +146,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SanPhamGUI.resx">
+      <DependentUpon>SanPhamGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -170,6 +210,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\image\icons8-upload-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\image\icons8-invoice-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\image\icons8-purchase-order-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\image\icons8-employee-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\image\icons8-customer-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\image\icons8-product-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
